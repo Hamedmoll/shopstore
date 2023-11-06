@@ -1,0 +1,5 @@
+development:
+  dialect: mysql
+  datasource: shopstore:shopstoret0lk2o20@tcp(localhost:19999)/shopstore_db?parseTime=true
+  dir: migrations
+  table: migrations

@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  shopstore-database:
+    image: mysql:8.0
+    ports:
+      - "19999:3306"
+    container_name: shopstore-database
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: always
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    environment:
+      MYSQL_ROOT_PASSWORD: shopstoreRoo7t0lk2o20
+      MYSQL_DATABASE: shopstore_db
+      MYSQL_USER: shopstore
+      MYSQL_PASSWORD: shopstoret0lk2o20
+volumes:
+  dbdata:
